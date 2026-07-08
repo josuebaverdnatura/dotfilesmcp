@@ -1,0 +1,12 @@
+{
+  "cookies": {
+    "__Secure-1PSIDCC": "<tu-cookie>",
+    "SIDCC": "<tu-cookie>",
+    "SID": "<tu-cookie>",
+    "HSID": "<tu-cookie>",
+    "SSID": "<tu-cookie>",
+    "APISID": "<tu-cookie>",
+    "SAPISID": "<tu-cookie>"
+  },
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+}

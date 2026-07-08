@@ -1,0 +1,25 @@
+# Secrets y datos sensibles
+*.env
+.env.*
+**/mcp_config.json
+notebooklm-mcp/auth.json
+.ssh/
+**/auth.json
+
+# Cachés
+**/Cache/
+**/GPUCache/
+**/Code Cache/
+**/Session Storage/
+**/Dawn*/
+**/blob_storage/
+**/Crashpad/
+**/logs/
+
+# Sistema
+Desktop.ini
+Thumbs.db
+.DS_Store
+
+# Node
+node_modules/

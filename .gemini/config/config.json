@@ -1,0 +1,14 @@
+{
+  "userSettings": {
+    "globalPermissionGrants": {
+      "allow": [
+        "command(git fetch)",
+        "command(ls)",
+        "command(which)",
+        "command(npm install)",
+        "command(psql)",
+        "command(head)"
+      ]
+    }
+  }
+}

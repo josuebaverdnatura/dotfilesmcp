@@ -1,0 +1,9 @@
+{
+  "editor.experimentalGpuAcceleration": "on",
+  "npm.packageManager": "pnpm",
+  "workbench.colorTheme": "Tomorrow Night Blue",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "python.languageServer": "Default",
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false
+}

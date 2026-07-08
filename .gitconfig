@@ -1,0 +1,10 @@
+[user]
+    name = Tu Nombre
+    email = tu@email.com
+[core]
+    autocrlf = true
+    editor = code --wait
+[init]
+    defaultBranch = main
+[push]
+    default = simple
