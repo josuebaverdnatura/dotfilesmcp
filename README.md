@@ -14,6 +14,29 @@ Stack completo de herramientas de IA agéntica: Gemini CLI, Antigravity IDE, MCP
 
 ## Setup rápido
 
+### Setup automatizado (recomendado)
+
+```powershell
+# Clonar el repo
+git clone https://github.com/josuebaverdnatura/dotfilesmcp.git
+cd dotfilesmcp
+
+# Ejecutar setup interactivo
+.\setup.ps1
+
+# Opciones avanzadas
+.\setup.ps1 -SkipDependencies    # Sin instalar npm packages
+.\setup.ps1 -SkipOllama          # Sin descargar modelos Ollama
+```
+
+El script te pedirá interactivamente:
+- Nombre y email para Git
+- GitHub Personal Access Token
+- Supabase keys (Service Role Key, Access Token)
+- Cookies de NotebookLM (opcional)
+
+### Setup manual
+
 ### 1. Instalar dependencias base
 
 ```powershell

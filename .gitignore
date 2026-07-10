@@ -2,9 +2,11 @@
 *.env
 .env.*
 **/mcp_config.json
+!*.template.json
 notebooklm-mcp/auth.json
 .ssh/
 **/auth.json
+!*_template.json
 
 # Cachés
 **/Cache/
