@@ -1,0 +1,7 @@
+{"name":"improve-sonar","trigger":"/improve-sonar","description":"Limpieza de deuda técnica SonarQube en modo Francotirador Autónomo con loops acotados","path":".agents/workflows/improve-sonar.md"}
+{"name":"sync-lovable","trigger":"/sync-lovable","description":"Sincronización bidireccional con Lovable Cloud manteniendo El Santuario","path":".agents/workflows/sync-lovable.md"}
+{"name":"use-codegraph","trigger":"/use-codegraph","description":"Búsqueda estructural de código mediante AST Tree-Sitter sin consumir tokens en grep","path":".agents/workflows/use-codegraph.md"}
+{"name":"use-notebooklm","trigger":"/use-notebooklm-lovablefeatures","description":"Consulta conceptual a base de conocimiento NotebookLM con cache de sesión","path":".agents/workflows/use-notebooklm-lovablefeatures.md"}
+{"name":"use-local","trigger":"/use-local","description":"Levantar el entorno de desarrollo local (Frontend + instrucciones para Supabase)","path":".agents/workflows/use-local.md"}
+{"name":"launch-local","trigger":"/launch-local","description":"Lanzador rápido de dev server y supabase functions serve","path":".agents/workflows/launch-local.md"}
+{"name":"bounded-loops","trigger":"bounded-loops","description":"Protocolo de loops acotados con presupuestos de reintentos y verificador determinista","path":".agents/loops/bounded_loop_protocol.md"}
