@@ -33,7 +33,7 @@ El script te pedirá interactivamente:
 - Nombre y email para Git
 - GitHub Personal Access Token
 - Supabase keys (Service Role Key, Access Token)
-- Cookies de NotebookLM (opcional)
+- Autenticación interactiva de NotebookLM (opcional)
 
 ### Setup manual
 
@@ -51,7 +51,7 @@ ollama pull qwen2.5-coder:7b
 # CLI tools
 npm install -g @modelcontextprotocol/server-github
 npm install -g @supabase/mcp-server-supabase
-npx -y notebooklm-mcp@latest
+npx -y notebooklm-mcp@2.0.0
 ```
 
 ### 2. Configurar Gemini CLI
@@ -102,7 +102,7 @@ docker exec -i supabase_db_... psql -U postgres < dump.sql
 
 - `.gemini\config\mcp_config.json` — contiene API keys y tokens
 - `.ssh\` — claves privadas SSH
-- `notebooklm-mcp\auth.json` — sesión de Google
+- `%LOCALAPPDATA%\notebooklm-mcp\Data` — sesión local de NotebookLM
 - Cualquier `.env` con secrets
 
 ## Estructura

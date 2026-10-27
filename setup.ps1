@@ -86,16 +86,10 @@ $supabaseAccessToken = Read-Input "Supabase Access Token" "" -Secure
 
 Write-Header "NotebookLM MCP (opcional)"
 
-Write-Host "Cookies de Google para NotebookLM MCP:" -ForegroundColor Gray
-Write-Host "  Extraer desde DevTools → Application → Cookies en notebooklm.google.com" -ForegroundColor DarkGray
 $setupNotebookLM = Read-Input "¿Configurar NotebookLM? (s/N)" "N"
-
-$cookies = @{}
 if ($setupNotebookLM -match "^[sSyY]") {
-    $cookieNames = @("__Secure-1PSIDCC", "SIDCC", "SID", "HSID", "SSID", "APISID", "SAPISID")
-    foreach ($cookie in $cookieNames) {
-        $cookies[$cookie] = Read-Input "Cookie $cookie" "" -Secure
-    }
+    Write-Host "La autenticación se realizará de forma interactiva mediante setup_auth." -ForegroundColor Gray
+    Write-Host "No se copiarán cookies, tokens ni perfiles de Chrome." -ForegroundColor DarkGray
 }
 
 # Procesar configuración
@@ -156,18 +150,10 @@ Copy-Item -Path ".\opencode\opencode.jsonc" -Destination $opencodeDir -Force
 Write-Success "opencode config copiado"
 
 # 6. NotebookLM MCP
-if ($cookies.Count -gt 0) {
+if ($setupNotebookLM -match "^[sSyY]") {
     Write-Step "Configurando NotebookLM MCP..."
-    $notebooklmDir = "$env:USERPROFILE\.notebooklm-mcp"
-    if (!(Test-Path $notebooklmDir)) { New-Item -ItemType Directory -Path $notebooklmDir -Force | Out-Null }
-
-    $authJson = @{
-        cookies = $cookies
-        userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-    } | ConvertTo-Json -Depth 3
-
-    $authJson | Out-File -FilePath "$notebooklmDir\auth.json" -Encoding UTF8 -Force
-    Write-Success "NotebookLM MCP configurado"
+    Write-Host "Instala notebooklm-mcp@2.0.0 y ejecuta setup_auth desde el cliente." -ForegroundColor Gray
+    Write-Success "Plantilla NotebookLM MCP preparada"
 }
 
 # Dependencias
@@ -209,7 +195,7 @@ Write-Host "  ✓ Git config ($gitName <$gitEmail>)" -ForegroundColor Gray
 Write-Host "  ✓ Gemini CLI + MCP servers" -ForegroundColor Gray
 Write-Host "  ✓ Antigravity IDE settings" -ForegroundColor Gray
 Write-Host "  ✓ opencode config" -ForegroundColor Gray
-if ($cookies.Count -gt 0) {
+if ($setupNotebookLM -match "^[sSyY]") {
     Write-Host "  ✓ NotebookLM MCP" -ForegroundColor Gray
 }
 

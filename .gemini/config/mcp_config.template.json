@@ -19,8 +19,11 @@
       "disabled": false
     },
     "notebooklm-mcp": {
-      "command": "python",
-      "args": ["-m", "notebooklm_tools.mcp.server"],
+      "command": "npx",
+      "args": ["-y", "notebooklm-mcp@2.0.0"],
+      "env": {
+        "NOTEBOOKLM_PROFILE": "standard"
+      },
       "disabled": false
     },
     "codegraph": {
